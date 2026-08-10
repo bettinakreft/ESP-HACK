@@ -41,6 +41,6 @@
 #define GPIO_F 25
 
 // Firmware version
-static const char* FIRMWARE = "v1.2";
+static const char* FIRMWARE = "v1.3";
 
 #endif

@@ -353,6 +353,10 @@ static void drawNRF24ConfigFrame(int16_t arrowY = -1) {
 
   display.clearDisplay();
   display.setTextSize(1);
+  // Config can be opened directly after a list-style submenu, which leaves
+  // the display text color set to black. Always restore the screen state here.
+  display.setTextColor(SH110X_WHITE);
+  display.setTextWrap(false);
   display.setCursor(3, 3);
   display.println(F("Config"));
   display.println(F("====================="));

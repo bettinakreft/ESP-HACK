@@ -28,7 +28,7 @@ void saveConfig();
 void loadConfig();
 void resetActivityTimer();
 void applyFactoryDefaults();
-bool OLED_printBootLogo(DisplayType &display);
+bool OLED_printBootLogo(DisplayType &display, bool show = true);
 void ensureDefaultBootLogoFile();
 
 DisplayType display = DisplayType(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
@@ -84,6 +84,7 @@ byte standbyTimeoutIndex = 2;
 unsigned long standbyTimeoutMs = standbyTimeoutOptionsMs[standbyTimeoutIndex];
 bool inStandby = false;
 unsigned long standbyIgnoreUntilMs = 0;
+static bool colorSchemeLocked = false;
 
 int standby_x = 0;
 int standby_y = 0;
@@ -94,6 +95,7 @@ const int standby_LOGO_WIDTH = 22;
 const int standby_LOGO_HEIGHT = 35;
 
 void applyColorScheme() {
+  if (colorSchemeLocked) return;
   display.invertDisplay(colorSelectionIndex == 0);
 }
 
@@ -635,6 +637,9 @@ void setup() {
     for(;;);
   }
   #endif
+  colorSchemeLocked = true;
+  // Keep the panel physically black while settings and the SD card are loading.
+  display.invertDisplay(false);
   display.clearDisplay();
   display.display();
 
@@ -651,9 +656,15 @@ void setup() {
   buttonOK.resetStates();
   buttonBack.resetStates();
 
-  if (!OLED_printBootLogo(display)) {
-    OLED_printLogo(display);
-  }
+  
+  display.invertDisplay(false);
+
+  bool hasBootLogo = OLED_printBootLogo(display, false);
+  if (!hasBootLogo) OLED_printLogo(display, false);
+
+  colorSchemeLocked = false;
+  applyColorScheme();
+  display.display();
 
   unsigned long logoStart = millis();
   while (millis() - logoStart < 1500) {
@@ -666,9 +677,6 @@ void setup() {
     }
     delay(10);
   }
-
-  display.clearDisplay();
-  display.display();
 
   OLED_printMenu(display, currentMenu);
   lastActivityTime = millis();

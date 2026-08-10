@@ -207,10 +207,10 @@ extern const unsigned char PROGMEM image_ButtonLeft_bits[];
 bool ensureSDReadyInteractive(bool allowSkip = true);
 
 
-inline void OLED_printLogo(DisplayType &display) {
+inline void OLED_printLogo(DisplayType &display, bool show = true) {
   display.clearDisplay();
   display.drawBitmap(0, 0, image_ESPHACK_bits, 128, 64, 1);
-  display.display();
+  if (show) display.display();
 }
 
 inline void OLED_printMenu(DisplayType &display, byte menuIndex) {

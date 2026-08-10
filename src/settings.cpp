@@ -82,7 +82,7 @@ static int hexDigitValue(int character) {
   return -1;
 }
 
-bool OLED_printBootLogo(DisplayType &display) {
+bool OLED_printBootLogo(DisplayType &display, bool show = true) {
   const size_t bitmapSize = (SCREEN_WIDTH * SCREEN_HEIGHT) / 8;
   static uint8_t bitmap[bitmapSize];
 
@@ -110,7 +110,7 @@ bool OLED_printBootLogo(DisplayType &display) {
   if (byteCount != bitmapSize) return false;
   display.clearDisplay();
   display.drawBitmap(0, 0, bitmap, SCREEN_WIDTH, SCREEN_HEIGHT, SH110X_WHITE);
-  display.display();
+  if (show) display.display();
   return true;
 }
 
