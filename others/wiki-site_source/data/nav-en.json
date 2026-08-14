@@ -1,0 +1,77 @@
+{
+  "groups": [
+    {
+      "label": "Sections",
+      "items": [
+        { "type": "link", "label": "Home", "href": "index.html" },
+        {
+          "type": "expand",
+          "id": "flash",
+          "label": "Flashing",
+          "href": "page-flash.html",
+          "openOn": [{ "file": "page-flash.html" }],
+          "children": [
+            { "label": "WIKI-Flasher", "href": "page-flash.html#wiki-flasher" },
+            { "label": "Web-Flasher", "href": "page-flash.html#web-flasher" },
+            { "label": "qESP-HACK", "href": "page-flash.html#qesphack" }
+          ]
+        },
+        {
+          "type": "expand",
+          "id": "firmware-features",
+          "label": "Features",
+          "href": "page-features.html",
+          "openOn": [{ "file": "page-features.html" }],
+          "children": [
+            { "label": "📶 WiFi", "href": "page-features.html#wifi" },
+            { "label": "🖱️ Bluetooth", "href": "page-features.html#bluetooth" },
+            { "label": "📻 SubGHz", "href": "page-features.html#subghz" },
+            { "label": "📺 Infrared", "href": "page-features.html#ir" },
+            { "label": "🧩 GPIO", "href": "page-features.html#gpio" },
+            { "label": "🎮 Games", "href": "page-features.html#games" },
+            { "label": "⚙️ Settings", "href": "page-features.html#settings" }
+          ]
+        },
+        {
+          "type": "expand",
+          "id": "build",
+          "label": "Build",
+          "href": "page-build.html",
+          "openOn": [{ "file": "page-build.html" }],
+          "children": [
+            { "label": "PCB", "href": "page-build.html#pcb" },
+            { "label": "Required components", "href": "page-build.html#required-components" },
+            { "label": "Connection scheme", "href": "page-build.html#connection-scheme" }
+          ]
+        },
+        {
+          "type": "expand",
+          "id": "modules",
+          "label": "Modules",
+          "href": "page-modules.html",
+          "openOn": [{ "file": "page-modules.html" }],
+          "children": [
+            { "label": "Errors", "href": "page-modules.html#errors" },
+            { "label": "NRF24 wiring", "href": "page-modules.html#nrf24" }
+          ]
+        },
+        {
+          "type": "expand",
+          "id": "developers",
+          "label": "Developer Hub",
+          "href": "page-developers.html",
+          "openOn": [{ "file": "page-developers.html" }],
+          "children": [
+            { "label": "Pinout", "href": "page-developers.html#pinout" },
+            { "label": "GPIO Peculiarity", "href": "page-developers.html#gpio-feature" }
+          ]
+        },
+        {
+          "type": "link",
+          "label": "Downloads",
+          "href": "page-downloads.html"
+        }
+      ]
+    }
+  ]
+}

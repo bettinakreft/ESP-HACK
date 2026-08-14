@@ -1,0 +1,169 @@
+{
+  "groups": [
+    {
+      "label": "Разделы",
+      "items": [
+        {
+          "type": "link",
+          "label": "Главная",
+          "href": "index.html"
+        },
+        {
+          "type": "expand",
+          "id": "flash",
+          "label": "Прошивка",
+          "href": "page-flash.html",
+          "openOn": [
+            {
+              "file": "page-flash.html"
+            }
+          ],
+          "children": [
+            {
+              "label": "WIKI-Flasher",
+              "href": "page-flash.html#wiki-flasher",
+              "type": "link"
+            },
+            {
+              "label": "Web-Flasher",
+              "href": "page-flash.html#web-flasher",
+              "type": "link"
+            },
+            {
+              "label": "qESP-HACK",
+              "href": "page-flash.html#qesphack",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "type": "expand",
+          "id": "firmware-features",
+          "label": "Функции",
+          "href": "page-features.html",
+          "openOn": [
+            {
+              "file": "page-features.html"
+            }
+          ],
+          "children": [
+            {
+              "label": "📶 WiFi",
+              "href": "page-features.html#wifi",
+              "type": "link"
+            },
+            {
+              "label": "🖱️ Bluetooth",
+              "href": "page-features.html#bluetooth",
+              "type": "link"
+            },
+            {
+              "label": "📻 SubGHz",
+              "href": "page-features.html#subghz",
+              "type": "link"
+            },
+            {
+              "label": "📺 Infrared",
+              "href": "page-features.html#ir",
+              "type": "link"
+            },
+            {
+              "label": "🧩 GPIO",
+              "href": "page-features.html#gpio",
+              "type": "link"
+            },
+            {
+              "label": "🎮 Games",
+              "href": "page-features.html#games",
+              "type": "link"
+            },
+            {
+              "label": "⚙️ Settitngs",
+              "href": "page-features.html#settings",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "type": "expand",
+          "id": "build",
+          "label": "Сборка",
+          "href": "page-build.html",
+          "openOn": [
+            {
+              "file": "page-build.html"
+            }
+          ],
+          "children": [
+            {
+              "label": "PCB",
+              "href": "page-build.html#pcb",
+              "type": "link"
+            },
+            {
+              "label": "Необходимые компоненты",
+              "href": "page-build.html#required-components",
+              "type": "link"
+            },
+            {
+              "label": "Схема подключения",
+              "href": "page-build.html#connection-scheme",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "type": "expand",
+          "id": "modules",
+          "label": "Модули",
+          "href": "page-modules.html",
+          "openOn": [
+            {
+              "file": "page-modules.html"
+            }
+          ],
+          "children": [
+            {
+              "label": "Ошибки",
+              "href": "page-modules.html#errors",
+              "type": "link"
+            },
+            {
+              "label": "Как подключить NRF24",
+              "href": "page-modules.html#nrf24",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "type": "expand",
+          "id": "developers",
+          "label": "Developer Hub",
+          "href": "page-developers.html",
+          "openOn": [
+            {
+              "file": "page-developers.html"
+            }
+          ],
+          "children": [
+            {
+              "label": "Распиновка",
+              "href": "page-developers.html#pinout",
+              "type": "link"
+            },
+            {
+              "label": "Особенность GPIO",
+              "href": "page-developers.html#gpio-feature",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "type": "link",
+          "label": "Downloads",
+          "href": "page-downloads.html"
+        }
+      ]
+    }
+  ]
+}

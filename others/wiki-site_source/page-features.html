@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Функции • ESP-HACK</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/site-nav.js?v=5" defer></script>
+  </head>
+  <body>
+    <div class="lang-switch lang-switch--ru" role="navigation" aria-label="Язык">
+      <div class="lang-switch__track">
+        <span class="lang-switch__thumb" aria-hidden="true"></span>
+        <span class="lang-switch__opt lang-switch__opt--current" aria-current="page">RU</span>
+        <a href="en/page-features.html" class="lang-switch__opt">EN</a>
+      </div>
+    </div>
+    <div class="shell shell--nav-left">
+      <aside class="sidebar" aria-label="Навигация по разделам">
+        <div class="sidebar__inner">
+          <a class="sidebar__brand" href="https://github.com/Teapot174/ESP-HACK" aria-label="ESP-HACK GitHub">ESP-HACK</a>
+          <nav aria-label="Разделы вики">
+            <div id="site-nav-container"></div>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div class="content__wrap">
+
+
+
+
+
+
+
+
+          <h1>Функции прошивки</h1>
+          <p>
+            Возможности ESP-HACK. Набор функций зависит от версии прошивки и подключённых
+            модулей (CC1101 / NRF24 / IR / SD и т.д.).
+          </p>
+
+          <h2 id="wifi">📶 WiFi</h2>
+          <ul>
+            <li><strong> Deauth</strong> — отключение пользователей от WiFi сети (работает плохо).</li>
+            <li><strong> Beacon Spam</strong> — генерация “мусорных” WiFi SSID.</li>
+            <li><strong> Evil Portal</strong> — точка доступа со страницей-ловушкой (введённые данные отправляются на дисплей).</li>
+            <li><strong> Wardriving</strong> — сбор информации о сетях и запись на SD (SSID, RSSI, WPA, MAC).</li>
+            <li><strong> Packets</strong> — анализ пакетов выбранной сети (спектрум).</li>
+          </ul>
+
+          <h2 id="bluetooth">🖱️ Bluetooth</h2>
+          <ul>
+            <li><strong> Spam</strong> — “спам” BLE рекламой (iOS/Android/Samsung/Xiaomi/Windows).</li>
+            <li><strong> BadBLE</strong> — эмуляция клавиатуры по BLE (Ducky Script).</li>
+            <li><strong> Mouse</strong> — при подключении эмулирует мышь, которая идет по кругу, квадрату и тд.</li>
+          </ul>
+
+<h2 id="subghz">📻 SubGHz</h2>
+<ul>
+  <li><strong> Read</strong> — приём и декодирование сигналов (поддерживаемые протоколы).</li>
+  <li><strong> Send</strong> — отправка декодированных/RAW сигналов. Поддерживает .sub сигналы.</li>
+  <li><strong> RAW</strong> — запись RAW сигналов. </li>
+  <li><strong> Analyzer</strong> — анализ частоты пультов, ключей и тд.</li>
+  <li><strong> Bruteforce</strong> — перебор кодов для разных шлагбаумов (Came/Nice/Ansonic/Holtek/Chamberlain).</li>
+  <li><strong> Jammer</strong> — глушение (НЕЗАКОННО).</li>
+</ul>
+
+<h2 id="ir">📺 Infrared</h2>
+<ul>
+  <li><strong> Read</strong> — чтение ИК-кодов.</li>
+  <li><strong> Send</strong> — отправка ИК-кодов. Поддерживает .ir сигналы.</li>
+  <li><strong> TV-B-Gone</strong> — выключение ТВ без базы на SD.</li>
+  <li><strong> Universal Remote</strong> — выключение чего угодно (на SD нужно скачать базу).</li>
+</ul>
+
+<h2 id="gpio">🧩 GPIO</h2>
+<ul>
+  <h3>NRF24:</h3>
+  <ul>
+    <li><strong>Jammer</strong> — глушение 2.4-2.5 ГГц (режимы WiFi, BLE, BLE ADV, Bluetooth, USB, Video, RadioCH, Zigbee, Drone, Full).</li>
+    <li><strong>Spectrum</strong> — анализатор 2.4-2.5 ГГц (спектрум сигналов).</li>
+    <li><strong>Config</strong> — настройка пинов.</li>
+  </ul>
+  
+  <h3>iButton:</h3>
+  <ul>
+    <li><strong>Read</strong> — считывание iButton ключей.</li>
+    <li><strong>Write</strong> — запись/перезапись ключей.</li>
+    <li><strong>Emulate</strong> — эмуляция считанного ключа.</li>
+  </ul>
+</ul>
+
+<h2 id="games">🎮 Games</h2>
+<ul>
+  <li><strong> Snake</strong></li>
+  <li><strong> Flappy Bird</strong></li>
+  <li><strong> Ping Pong</strong></li>
+  <li><strong> Bricks</strong></li>
+  <li><strong> "Doom"</strong></li>
+</ul>
+
+<h2 id="settings">⚙️ Settings</h2>
+<ul>
+  <li><strong> Interface: Display Color, Standby time, Menu, Submenu, Boot Logo.</strong> — цвет дисплея, время ожидания, меню, подменю, бут лого.</li>
+  <li><strong> Restart</strong> — перезагрузка.</li>
+  <li><strong> Reset</strong> — сброс настроек.</li>
+  <li><strong> Update</strong> — обновление прошивки .bin файлом с SD.</li>
+  <li><strong> About</strong> — информация о версии.</li>
+</ul>
+        
+
+
+
+</div>
+      </main>
+    </div>
+  </body>
+</html>
